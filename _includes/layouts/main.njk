@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mativizo - Najlepszy Niewidomy YouTuber w całej Galaktyce 🪐</title>
+  <title>{{ title }}</title>
 
   <!-- SEO Meta Tags -->
   <meta name="description"
-    content="Myślisz, że grasz słabo? Obejrzyj Mativizo. To król celowania, mistrz driftu i koneser dziwnych gier. Phasmophobia, Euro Truck Simulator 2, Obsideo, Demonologist, Vade Retro to gry, w których wzrok jest potrzebny, to po co on się tam pcha? 😂">
+    content="{{ description }}">
   <meta name="keywords"
     content="mativizo,phasmophobia,obsideo,euro truck simulator 2,niewidomy youtuber,niewidomy influencer,mtvz">
 
@@ -30,8 +30,25 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400..700&family=Gluten:wght@100..900&family=Oswald:wght@200..700&family=Righteous&display=swap" rel="stylesheet">
 
   <style>
+  html, body {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .text-upper {
+    text-transform: uppercase;
+  }
+
+  .text-italic {
+    font-style: italic;
+  }
+
     .bg-darker {
       background-color: #111;
     }
@@ -52,7 +69,7 @@ background: linear-gradient(53deg, rgba(2,0,36,1) 4%, rgba(0,0,22,1) 40%, rgba(1
 </head>
 
 <body data-bs-theme="dark" class="bg-main">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-special-1 px-3">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-special-1 px-3 fixed-top">
     <a class="navbar-brand" href="#">Mativizo</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,8 +113,18 @@ background: linear-gradient(53deg, rgba(2,0,36,1) 4%, rgba(0,0,22,1) 40%, rgba(1
     </div>
   </nav>
 
+  <div class="mt-4 p-5 text-white rounded text-center">
+    <h1 class="h4 text-italic text-uppercase">{{ title }}</h1>
+    <p class="my-4">{{ description }}</p>
+    <a class="btn btn-danger btn-sm m-2" href="https://mtvz.pl/site/youtube">Subskrybuj na YouTube</a>
+    <a class="btn btn-dark btn-sm m-2" href="https://mtvz.pl/site/tiktok">Obserwuj na TikToku</a>
+    <a class="btn btn-warning btn-sm m-2" href="https://mtvz.pl/site/patronite">Wspieraj na Patronite</a>
+    <a class="btn btn-primary btn-sm m-2" href="https://instagram.com/matidziad">Obserwuj na Instagramie</a>
+  </div>
 
-  <div class="container-fluid py-5">
+  <div class="container-fluid">
+
+  
     
 
 
@@ -127,71 +154,25 @@ background: linear-gradient(53deg, rgba(2,0,36,1) 4%, rgba(0,0,22,1) 40%, rgba(1
     <div class="container mt-5">
       <h2 id="nowe-filmy" class="h5 my-4">Nowe Filmy na kanale Mativizo 🔥</h2>
       <div class="row">
-        <div class="col-4">
-          <div class="card bg-dark-blue">
-            <a href="https://www.youtube.com/watch?v=2gGisWTgzFM">
-              <img class="card-img-top" src="https://i.ytimg.com/vi/2gGisWTgzFM/maxresdefault.jpg" alt="Card image cap">
-            </a>
-            <div class="card-body">
-              <p>
-                <span class="badge badge-primary bg-danger">Phasmophobia</span>
-                <span class="badge badge-primary bg-warning">Seria</span>
-                <span class="badge badge-primary bg-success">Multi</span>
-              </p>
-              <h5 class="card-title">Kolejny odcinek | Seria Niefortunnych Przekleństw!</h5>
-              <p class="card-text">Trzeci odcinek z gry Phasmophobia wraz z @Xarieq wpada na kanał! Łapiemy duchy, bez spiny.</p>
-              <a href="https://www.youtube.com/watch?v=2gGisWTgzFM" class="btn btn-danger">Obejrzyj na YouTube</a>
+        {% for video in collections.youtubeNewest %}
+          <div class="col-4">
+            <div class="card">
+              <a href="https://www.youtube.com/watch?v={{ video.id }}">
+                <img class="card-img-top" src="https://i.ytimg.com/vi/{{ video.id }}/maxresdefault.jpg" alt="{{ video.title }}">
+              </a>
+              <div class="card-body">
+                <p>
+                  <span class="badge badge-primary bg-danger">Phasmophobia</span>
+                  <span class="badge badge-primary bg-primary">Ale to PRL</span>
+                  <span class="badge badge-primary bg-warning">Seria</span>
+                </p>
+                <h5 class="card-title">{{ video.title }}</h5>
+                <p class="card-text">{{ video.description }}</p>
+                <a href="https://www.youtube.com/watch?v={{ video.id }}" class="btn btn-danger">Obejrzyj na YouTube</a>
             </div>
           </div>
-
         </div>
-
-
-        <div class="col-4">
-          <div class="card">
-            <a href="https://www.youtube.com/watch?v=O1pCGy6KXhc">
-              <img class="card-img-top" src="https://i.ytimg.com/vi/O1pCGy6KXhc/maxresdefault.jpg" alt="Card image cap">
-            </a>
-            <div class="card-body">
-              <p>
-                <span class="badge badge-primary bg-danger">Phasmophobia</span>
-                <span class="badge badge-primary bg-primary">Ale to PRL</span>
-                <span class="badge badge-primary bg-warning">Seria</span>
-              </p>
-              <h5 class="card-title">Phasmophobia, ale to PRL!</h5>
-              <p class="card-text">Pierwszy film z serii "Ale to PRL". Dajcie znać, jak Wam się podoba taka koncepcja!</p>
-              <a href="https://www.youtube.com/watch?v=O1pCGy6KXhc" class="btn btn-danger">Obejrzyj na YouTube</a>
-            </div>
-
-
-          </div>
-
-          
-
-        </div>
-
-        <div class="col-4">
-          <div class="card">
-            <a href="https://www.youtube.com/watch?v=ObM0glDMRFM">
-              <img class="card-img-top" src="https://i.ytimg.com/vi/ObM0glDMRFM/maxresdefault.jpg" alt="Card image cap">
-            </a>
-            <div class="card-body">
-              <p>
-                <span class="badge badge-primary bg-danger">YouTube</span>
-                <span class="badge badge-primary bg-secondary">Reakcja</span>
-                <span class="badge badge-primary bg-warning">Seria</span>
-                <span class="badge badge-primary bg-success">Euro Truck Simulator 2</span>
-              </p>
-              <h5 class="card-title">Oglądamy 30+ najlepszych shortów! 😂</h5>
-              <p class="card-text">Trzeci odcinek z gry Phasmophobia wraz z @Xarieq wpada na kanał! Łapiemy duchy, bez spiny.</p>
-              <a href="https://www.youtube.com/watch?v=ObM0glDMRFM" class="btn btn-danger">Obejrzyj na YouTube</a>
-            </div>
-
-
-          </div>
-
-          
-
+      {% endfor %}
         </div>
       </div>
     </div>
@@ -205,14 +186,29 @@ background: linear-gradient(53deg, rgba(2,0,36,1) 4%, rgba(0,0,22,1) 40%, rgba(1
           Serie ze statusem <span class="badge badge-primary bg-warning">Zawieszona</span> są tymczasowo wstrzymane i powrócą w przyszłości.
       </p>
 
+      {% for series in collections.youtubeSeries %}
 
-      <h3>Seria Niefortunnych Przekleństw | Phasmophobia</h3>
-      <div class="row">
-
+      <h3 id="serie" class="mt-5">{{ series.title }}</h3>
+      <div class="row my-3">
         <div class="col-3">
           <div class="card">
-            <a href="https://www.youtube.com/watch?v=2gGisWTgzFM">
-              <img class="card-img-top" src="https://i.ytimg.com/vi/2gGisWTgzFM/maxresdefault.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h6 class="card-title">
+                {{ series.title }}
+              </h6>
+              <p>
+                {{ series.description }}
+              </p>
+              <a href="{{ series.playlist }}" class="btn btn-danger">Oglądaj całą serię!</a> | 
+            </div>
+          </div>
+        </div>
+
+      {% for video in series.videos %}
+        <div class="col-3">
+          <div class="card">
+            <a href="https://www.youtube.com/watch?v={{ series.id }}">
+              <img class="card-img-top" src="https://i.ytimg.com/vi/{{ series.id }}/maxresdefault.jpg" alt="{{ video.title }}">
             </a>
             <div class="card-body">
               <h6 class="card-title">
@@ -223,40 +219,9 @@ background: linear-gradient(53deg, rgba(2,0,36,1) 4%, rgba(0,0,22,1) 40%, rgba(1
             </div>
           </div>
         </div>
-
-
-        <div class="col-3">
-          <div class="card">
-            <a href="https://www.youtube.com/watch?v=2gGisWTgzFM">
-              <img class="card-img-top" src="https://i.ytimg.com/vi/2gGisWTgzFM/maxresdefault.jpg" alt="Card image cap">
-            </a>
-            <div class="card-body">
-              <h6 class="card-title">
-                🤬 Czeski DUCH atakuje! | Phasmophobia SNP #3 @Xarieq
-              </h6>
-              <a href="https://www.youtube.com/watch?v=2gGisWTgzFM" class="btn btn-danger">Oglądaj!</a> | 
-              <a href="" class="text-primary">Playlista</a>
-            </div>
-          </div>
+        {% endfor %}
         </div>
-
-        <div class="col-3">
-          <div class="card">
-            <a href="https://www.youtube.com/watch?v=2gGisWTgzFM">
-              <img class="card-img-top" src="https://i.ytimg.com/vi/2gGisWTgzFM/maxresdefault.jpg" alt="Card image cap">
-            </a>
-            <div class="card-body">
-              <h6 class="card-title">
-                🤬 Czeski DUCH atakuje! | Phasmophobia SNP #3 @Xarieq
-              </h6>
-              <a href="https://www.youtube.com/watch?v=2gGisWTgzFM" class="btn btn-danger">Oglądaj!</a> | 
-              <a href="" class="text-primary">Playlista</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
+        {% endfor %}
     </div>
   </div>
 
