@@ -1,0 +1,22 @@
+{
+  "name": "youtube-mativizo",
+  "version": "1.0.0",
+  "description": "mativizo.github.io/youtube-mativizo repo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mativizo/youtube-mativizo.git"
+  },
+  "author": "Mativizo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mativizo/youtube-mativizo/issues"
+  },
+  "homepage": "https://github.com/mativizo/youtube-mativizo#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
