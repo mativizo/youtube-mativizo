@@ -1,5 +1,6 @@
 const wspolpraca = [
-    { channel: "@xarieq", name: "Xarieq", icon: "https://yt3.googleusercontent.com/Kusm_lAsSxYZh5frJ9t-pmCjoRuvTFo470_ufHtvAm2PGVKnTi0mi7PvceJqJ-4LXdWt5eBz=s176-c-k-c0x00ffffff-no-rj", description: "Xarieq to stały uczestnik kanału, 5HEAD, człowiek gór i miszcz aimu. Spotkacie go zarówno w shortach, jak i w pełnych seriach. Taką serią jest np. Seria Niefortunnych Przekleństw, którą łatwo możecie znaleźć w sekcji <a href='/#serie'>Serie</a>." }
+    { channel: "@Xarieq", title: "YouTuber / Streamer / Koneser", name: "Xarieq", icon: "https://yt3.googleusercontent.com/Kusm_lAsSxYZh5frJ9t-pmCjoRuvTFo470_ufHtvAm2PGVKnTi0mi7PvceJqJ-4LXdWt5eBz=s176-c-k-c0x00ffffff-no-rj", description: "Xarieq to stały uczestnik kanału, 5HEAD, człowiek gór i miszcz aimu. Spotkacie go zarówno w shortach, jak i w pełnych seriach. Taką serią jest np. Seria Niefortunnych Przekleństw, którą łatwo możecie znaleźć w sekcji <a href='/#serie'>Serie</a>. Xarieq zagrał też w One-armed Robber, czy ETS2." },
+    { channel: "@SazaGang", title: "YouTuber", name: "SazaGang", icon: "https://yt3.googleusercontent.com/nHy_ApoZTbq2bRy9Q5OeZJ205Ixxx9E4QmsJDOKPyhm57ZwdZibDNXeBz0R5dHPp880puiYdIA=s176-c-k-c0x00ffffff-no-rj", description: "Młody, gniewny i szalony. Sazę znacie z takich serii jak Duo w Phasmophobia, Stumble Guys, Curve Crash." },
 ]
 
 const wordToURL = [
