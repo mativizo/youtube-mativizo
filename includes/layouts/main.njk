@@ -51,8 +51,8 @@
 
         <section class="bsb-author-2">
           <div class="row justify-content-center">
-              <div class="card border-light-subtle p-2">
-                <div class="row gy-3 align-items-center">
+              <div class="card p-2 border-none">
+                <div class="row gy-3 align-items-start">
                   <div class="col-md-4">
                     <a href="https://youtube.com/{{ user.channel }}" class="bsb-hover-image d-block rounded overflow-hidden">
                       <img class="img-fluid author-avatar bsb-scale bsb-hover-scale-up w-100" loading="lazy" src="{{ user.icon }}" alt="{{ user.name }}">
@@ -64,7 +64,7 @@
                       <h3 class="card-title mb-2">
                         <a class="card-link link-dark text-decoration-none" href="https://youtube.com/{{ user.channel }}">{{ user.name }}</a>
                       </h3>
-                      <p class="card-text mb-3">{{ user.description }}</p>
+                      <p class="card-text mb-3">{{ user.description | safe }}</p>
                       <ul class="bsb-social-media nav m-0">
                         <li class="nav-item">
                           <a class="btn btn-danger" href="https://youtube.com/{{ user.channel}}">
