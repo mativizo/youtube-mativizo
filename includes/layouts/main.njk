@@ -3,9 +3,9 @@
 {% block content %}
   <div class="container my-5">
     <h2 id="nowe-filmy" class="h5 my-4">Nowe Filmy na kanale Mativizo 🔥</h2>
-    <div class="row w-100">
+    <div class="row">
       {% for video in collections.youtubeNewest %}
-        <div class="col-12 col-md-6 col-lg-4 m-2">
+        <div class="col-12 col-md-6 col-lg-4 my-2">
           <div class="card w-100">
             <a href="https://www.youtube.com/watch?v={{ video.id }}">
               <img class="card-img-top" src="https://i.ytimg.com/vi/{{ video.id }}/maxresdefault.jpg" alt="{{ video.title }}">
