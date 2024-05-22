@@ -1,32 +1,30 @@
 {% extends "includes/layouts/base.njk" %}
 
 {% block content %}
-  <div class="container-fluid">
-    <div class="container mt-5">
-      <h2 id="nowe-filmy" class="h5 my-4">Nowe Filmy na kanale Mativizo 🔥</h2>
-      <div class="row w-100">
-        {% for video in collections.youtubeNewest %}
-          <div class="col-12 col-md-6 col-lg-4 m-2">
-            <div class="card w-100">
-              <a href="https://www.youtube.com/watch?v={{ video.id }}">
-                <img class="card-img-top" src="https://i.ytimg.com/vi/{{ video.id }}/maxresdefault.jpg" alt="{{ video.title }}">
-              </a>
-              <div class="card-body">
-                <p>
-                  <span class="badge badge-primary bg-danger">Phasmophobia</span>
-                  <span class="badge badge-primary bg-primary">Ale to PRL</span>
-                  <span class="badge badge-primary bg-warning">Seria</span>
-                </p>
-                <h5 class="card-title">{{ video.title }}</h5>
-                <p class="card-text">{{ video.description }}</p>
-                <a href="https://www.youtube.com/watch?v={{ video.id }}" class="btn btn-danger">Obejrzyj na YouTube</a>
+  <div class="container my-5">
+    <h2 id="nowe-filmy" class="h5 my-4">Nowe Filmy na kanale Mativizo 🔥</h2>
+    <div class="row w-100">
+      {% for video in collections.youtubeNewest %}
+        <div class="col-12 col-md-6 col-lg-4 m-2">
+          <div class="card w-100">
+            <a href="https://www.youtube.com/watch?v={{ video.id }}">
+              <img class="card-img-top" src="https://i.ytimg.com/vi/{{ video.id }}/maxresdefault.jpg" alt="{{ video.title }}">
+            </a>
+            <div class="card-body">
+              <p>
+                <span class="badge badge-primary bg-danger">Phasmophobia</span>
+                <span class="badge badge-primary bg-primary">Ale to PRL</span>
+                <span class="badge badge-primary bg-warning">Seria</span>
+              </p>
+              <h5 class="card-title">{{ video.title }}</h5>
+              <p class="card-text">{{ video.description }}</p>
+              <a href="https://www.youtube.com/watch?v={{ video.id }}" class="btn btn-danger">Obejrzyj na YouTube</a>
             </div>
           </div>
         </div>
       {% endfor %}
-        </div>
-      </div>
     </div>
+  </div>
 
   <section id="serie" class="container my-5">
     {% include "includes/parts/series.njk" %}    
