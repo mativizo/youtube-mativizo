@@ -1,9 +1,17 @@
+const wspolpraca = [
+    { channel: "@xarieq", name: "Xarieq", icon: "https://yt3.googleusercontent.com/Kusm_lAsSxYZh5frJ9t-pmCjoRuvTFo470_ufHtvAm2PGVKnTi0mi7PvceJqJ-4LXdWt5eBz=s176-c-k-c0x00ffffff-no-rj", description: "Xarieq to stały uczestnik kanału, 5HEAD, człowiek gór i miszcz aimu. Spotkacie go zarówno w shortach, jak i w pełnych seriach. Taką serią jest np. Seria Niefortunnych Przekleństw, którą łatwo możecie znaleźć w sekcji <a href='/#serie'>Serie</a>." }
+]
+
 const wordToURL = [
     {w: "@SazaGang", url: "https://youtube.com/@sazagang"},
     {w: "@Xarieq", url: "https://youtube.com/@xarieq"},
     {w: "@Mativizo", url: "https://youtube.com/@Mativizo"},
     {w: "Patronite", url: "https://mtvz.pl/site/patronite"},
     {w: "Instagram", url: "https://instagram.com/mativizo"},
+    {w: "TikTok", url: "https://mtvz.pl/site/tiktok"},
+]
+
+
 const tutorials = [
     {
         title: "Poradniki Phasmophobia",
@@ -62,6 +70,7 @@ const youtubeSeries = [
         videos: [
             { id: "O1pCGy6KXhc", title: "👻 PHASMOPHOBIA, ale to PRL! [Zwiastun Gry]" },
         ],
+    },
     {
         title: "Reakcja na...",
         description: "Mati reaguje na różne filmy, rzeczy i dziwności.",
@@ -88,6 +97,9 @@ const youtubeSeries = [
 module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("youtubeNewest", function(collection) {
         return youtubeNewest;
+    });
+    eleventyConfig.addCollection("wspolpraca", function(collection) {
+        return wspolpraca;
     });
     eleventyConfig.addCollection("youtubeSeries", function(collection) {
         return youtubeSeries;
