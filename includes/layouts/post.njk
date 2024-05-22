@@ -1,0 +1,26 @@
+{% extends "includes/layouts/base.njk" %}
+
+{% block content %}
+
+<article class="container">
+  <iframe class="w-75 d-block m-auto mb-5" style="height: 50vh;" src="https://www.youtube-nocookie.com/embed/{{ ytid }}" title="{{title}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  <div class="container my-5 alert bg-special-1 p-3 border-rounded">
+    <div class="row">
+      <div class="col-8">
+        <p class="h4">Hej Ty!</p>
+        <p>Wolisz wersję tekstową? <span class="text-primary">{{ title }}</span> w formie tekstowej poniżej.</p>
+      </div>
+      <div class="col-4 py-5">
+        <a class="btn d-block btn-danger" role="button" href="#transkrypcja">Zobacz Transkrypcję Filmu!</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <p>{{ date }}</p>
+  </div>
+  {{ content | safe}}
+</article>
+
+{% endblock %}

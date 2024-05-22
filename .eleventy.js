@@ -1,3 +1,9 @@
+const wordToURL = [
+    {w: "@SazaGang", url: "https://youtube.com/@sazagang"},
+    {w: "@Xarieq", url: "https://youtube.com/@xarieq"},
+    {w: "@Mativizo", url: "https://youtube.com/@Mativizo"},
+    {w: "Patronite", url: "https://mtvz.pl/site/patronite"},
+    {w: "Instagram", url: "https://instagram.com/mativizo"},
 const tutorials = [
     {
         title: "Poradniki Phasmophobia",
@@ -56,6 +62,23 @@ const youtubeSeries = [
         videos: [
             { id: "O1pCGy6KXhc", title: "👻 PHASMOPHOBIA, ale to PRL! [Zwiastun Gry]" },
         ],
+    {
+        title: "Reakcja na...",
+        description: "Mati reaguje na różne filmy, rzeczy i dziwności.",
+        playlist: "https://www.youtube.com/watch?v=ObM0glDMRFM&list=PLsQYoYeIcdawb5kS5rayg3rKFQktSbJGr",
+        videos: [
+            { id: "ObM0glDMRFM", title: "Oglądam 30+ NAJLEPSZYCH SHORTÓW! 🔥👀" }
+        ]
+    },
+    {
+        title: "Curve Crash w duecie!",
+        description: "Gramy mocno w kreski razem z @SazaGang",
+        playlist: "#",
+        videos: [
+            { id: "_R3km6QHgLY", title: "TY ŻMIJO! 🐍 | Curve Crash z @SazaGang #3" },
+            { id: "UbCCGVvA57w", title: "Niszczę TYPA 💀 | Curve Crash z @SazaGang #2" },
+            { id: "-oshl3Ev2Co", title: "Kreski i chillout | Curve Crash z @SazaGang #1" },
+        ]
     }
 ];
 

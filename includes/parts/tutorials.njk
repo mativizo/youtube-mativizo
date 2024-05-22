@@ -1,0 +1,25 @@
+  <h3 id="poradniki" class="text-center text-primary">Poradniki</h3>
+    <div class="row my-3">
+      {% for tutorial in collections.Poradniki %}
+        <div class="col-12 col-md-6 col-lg-4 my-4">
+          <div class="card">
+            <img src="https://i.ytimg.com/vi/{{tutorial.data.ytid}}/maxresdefault.jpg" class="card-img" alt="{{tutorial.data.title}}">
+            <div class="card-img-overlay bg-overlay d-flex justify-content-end align-items-end">
+              <div class="">
+                <h6 class="card-title text-uppercase h5 text-italic">{{tutorial.data.title}}</h6>
+                <p class="card-text">
+                  <span class="badge badge-danger bg-danger">
+                    {{ tutorial.date.toISOString().split('T')[0] }}
+                  </span>
+                  {% for tag in tutorial.data.tags %}
+                    <span class="badge badge-danger bg-overlay">{{ tag }}</span>
+                  {% endfor %}
+                </p>
+                <a href="{{ tutorial.url }}" class="btn btn-danger w-100">Czytaj dalej</a>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      {% endfor %}
+    </div>

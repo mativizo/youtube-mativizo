@@ -1,0 +1,28 @@
+<h3 class="text-primary text-center">Osiągnięcia</h3>
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-xl-6">
+        <ul class="timeline">
+            {% for tl in collections.timeline %}
+                <li class="timeline-item">
+                    <div class="timeline-body">
+                        <div class="timeline-content">
+                            <div class="card border-0">
+                                <div class="card-body p-0">
+                                    <h5 class="card-subtitle text-secondary">
+                                        {{ tl.date }}
+                                    </h5>
+                                    <h2 class="card-title">
+                                        {{ tl.title }}
+                                    </h2>
+                                    <p class="card-text m-0">
+                                        {{ tl.description }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+          {% endfor %}
+        </ul>
+    </div>
+</div>

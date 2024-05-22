@@ -1,0 +1,45 @@
+<h3 class="text-primary text-center">Serie filmów:</h2>
+<p>
+    Tutaj znajdziesz wszystkie serie i ich statusy!
+    Serie ze statusem <span class="badge badge-primary bg-primary">Trwająca</span> są nadal rozwijane.
+    Serie ze statusem <span class="badge badge-primary bg-success">Zakończona</span> nie otrzymają nowych filmów.
+    Serie ze statusem <span class="badge badge-primary bg-warning">Zawieszona</span> są tymczasowo wstrzymane i powrócą w przyszłości.
+</p>
+
+    {% for series in collections.youtubeSeries %}
+
+      <h3 id="serie" class="mt-5">{{ series.title }}</h3>
+      <div class="row my-3">
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-title">
+                {{ series.title }}
+              </h6>
+              <p>
+                {{ series.description }}
+              </p>
+              <a href="{{ series.playlist }}" class="btn btn-danger w-100">Oglądaj całą serię!</a>
+            </div>
+          </div>
+        </div>
+
+      {% for video in series.videos %}
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card">
+            <a href="https://www.youtube.com/watch?v={{ video.id }}">
+              <img class="card-img-top" src="https://i.ytimg.com/vi/{{ video.id }}/maxresdefault.jpg" alt="{{ video.title }}">
+            </a>
+            <div class="card-body">
+              <div class="d-flex w-100 justify-content-between">
+                <a href="https://www.youtube.com/watch?v={{ video.id }}" class="btn btn-danger">Oglądaj!</a>
+                <a href="{{ series.playlist }}" class="text-primary float-right">Playlista</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
