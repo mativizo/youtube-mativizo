@@ -1,0 +1,4 @@
+Sitemap: https://mtvz.pl/sitemap.xml
+
+User-agent: *
+Disallow:
