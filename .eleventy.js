@@ -80,9 +80,9 @@ module.exports = function(eleventyConfig) {
 
     return {
       dir: {
-        input: "_pages",
-        output: "_site",
-        layouts: "../_includes/layouts"
+        input: "pages",
+        output: "docs",
+        layouts: "../includes/layouts"
       }
     }
   };
