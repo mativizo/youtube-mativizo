@@ -1,12 +1,11 @@
 ---
-title: "Jak sprawdzać EMF? Monitor Całkowitej Aktywności #phasmophobia #poradnik 2022
-"
+title: "Jak sprawdzać EMF? Monitor Całkowitej Aktywności #phasmophobia #poradnik 2022"
 tags: ['Poradniki', 'Phasmophobia']
 date: 2022-08-20
 ytid: cZcP5IT_lds
 layout: post.njk
 length: "08:22"
-permalink: "/poradniki/odczytywanie-emf-phasmophobia-poradnik"
+permalink: "/poradniki/odczytywanie-emf-phasmophobia-poradnik/"
 ---
 
 # Odczytywanie EMF z czytnika i z tablicy aktywności w Phasmophobia
