@@ -5,27 +5,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mativizo | Kontakt | mtvz.pl</title>
+  <title>PRZEKLĘTE PRZEDMIOTY wyjaśnione w 4 MINUTY - PHASMOPHOBIA</title>
 
   <!-- SEO Meta Tags -->
   <meta name="description"
-    content="Dane kontaktowe i informacje na temat tego, jak możesz się ze mną skontaktować!">
+    content="">
   <meta name="keywords"
     content="mativizo,phasmophobia,obsideo,euro truck simulator 2,niewidomy youtuber,niewidomy influencer,mtvz">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="/kontakt/">
-  <meta property="og:title" content="Mativizo | Kontakt | mtvz.pl">
+  <meta property="og:url" content="/przeklęte-przedmioty-w-phasmophobia">
+  <meta property="og:title" content="PRZEKLĘTE PRZEDMIOTY wyjaśnione w 4 MINUTY - PHASMOPHOBIA">
   <meta property="og:description"
-    content="Dane kontaktowe i informacje na temat tego, jak możesz się ze mną skontaktować!">
+    content="">
   <meta property="og:image" content="https://mtvz.pl/imgs/logo.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="https://mtvz.pl/imgs/logo.jpg">
-  <meta property="twitter:url" content="/kontakt/">
-  <meta property="twitter:title" content="Mativizo | Kontakt | mtvz.pl">
-  <meta property="twitter:description" content="Dane kontaktowe i informacje na temat tego, jak możesz się ze mną skontaktować!">
+  <meta property="twitter:url" content="/przeklęte-przedmioty-w-phasmophobia">
+  <meta property="twitter:title" content="PRZEKLĘTE PRZEDMIOTY wyjaśnione w 4 MINUTY - PHASMOPHOBIA">
+  <meta property="twitter:description" content="">
   <meta property="twitter:image" content="https://mtvz.pl/imgs/logo.jpg">
 
   <!-- CSS -->
@@ -135,8 +135,8 @@ background: linear-gradient(53deg, rgba(2,0,36,1) 4%, rgba(0,0,22,1) 40%, rgba(1
   </nav>
 
   <div class="my-5 pt-5 text-white rounded text-center">
-    <h1 class="h4 text-italic text-uppercase">Mativizo | Kontakt | mtvz.pl</h1>
-    <p class="my-4 w-50 m-auto">Dane kontaktowe i informacje na temat tego, jak możesz się ze mną skontaktować!</p>
+    <h1 class="h4 text-italic text-uppercase">PRZEKLĘTE PRZEDMIOTY wyjaśnione w 4 MINUTY - PHASMOPHOBIA</h1>
+    <p class="my-4 w-50 m-auto"></p>
     <a class="btn btn-danger btn-sm m-2" href="https://mtvz.pl/site/youtube">Subskrybuj na YouTube</a>
     <a class="btn btn-dark btn-sm m-2" href="https://mtvz.pl/site/tiktok">Obserwuj na TikToku</a>
     <a class="btn btn-warning btn-sm m-2" href="https://mtvz.pl/site/patronite">Wspieraj na Patronite</a>
@@ -145,27 +145,110 @@ background: linear-gradient(53deg, rgba(2,0,36,1) 4%, rgba(0,0,22,1) 40%, rgba(1
 
   <div class="container-fluid">
     
-<div class="container p-3">
-  <div class="row">
-<div class="col-12 col-lg-6">
-<img src="/imgs/logo.jpg" class="w-100">
-</div>
-<div class="col-12 col-lg-6">
-<p>Cześć!</p>
-<p>Aby skontaktować się ze mną bezpośrednio, w celach luźnych i luźniejszych możesz napisać do mnie DM na TikTok lub na Instagramie. Raczej nie powinno być problemu z odpowiedzią - postaram się odpisać szybko i konkretnie.</p>
-<ul>
-<li>Instagram: <a href="https://link.mtvz.pl/ig">@matidziad</a></li>
-<li>TikTok: <a href="https://link.mtvz.pl/tiktok">@mativizo</a></li>
-</ul>
-<p>Jeżeli sprawa jest bardziej formalna lub wymaga dłuższej formy zapraszam do kontaktu przez e-mail:</p>
-<ul>
-<li>E-mail: <a href="mailto:mativizo@outlook.com">mativizo@outlook.com</a></li>
-</ul>
-<p>Proszę o korzystanie z e-maila jako bardziej biznesowej formy kontaktu. 😊</p>
-</div>
-</div>
 
-</div>
+<article class="container">
+  <iframe class="w-75 d-block m-auto mb-5" style="height: 50vh;" src="https://www.youtube-nocookie.com/embed/IGelGHCoSW8" title="PRZEKLĘTE PRZEDMIOTY wyjaśnione w 4 MINUTY - PHASMOPHOBIA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  <div class="container my-5 alert bg-special-1 p-3 border-rounded">
+    <div class="row">
+      <div class="col-8">
+        <p class="h4">Hej Ty!</p>
+        <p>Wolisz wersję tekstową? <span class="text-primary">PRZEKLĘTE PRZEDMIOTY wyjaśnione w 4 MINUTY - PHASMOPHOBIA</span> w formie tekstowej poniżej.</p>
+      </div>
+      <div class="col-4 py-5">
+        <a class="btn d-block btn-danger" role="button" href="#transkrypcja">Zobacz Transkrypcję Filmu!</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <p>Wed Jul 07 2021 02:00:00 GMT+0200 (czas środkowoeuropejski letni)</p>
+  </div>
+  <h1>Phasmophobia: Przeklęte Przedimoty w skrócie</h1>
+<p>👋😊 Phasmophobia: Przeklęte Przedmioty - Krótkie wyjaśnienie działania wszystkich przeklętych przedmiotów w grze Phasmophobia. Oczywiście temat nie jest wyczerpany, ale są to podstawy, które warto znać. 😎</p>
+<p>⏲ Spis Treści:</p>
+<ul>
+<li>00:00 | Wstęp - Phasmophobia Przeklęte Przedmioty</li>
+<li>00:12 | Przeklęte Przedmioty: Pozytywka (Music Box)</li>
+<li>00:59 | Przeklęte Przedmioty: Laleczka Voodoo (Voodoo Doll)</li>
+<li>01:25 | Przeklęte Przedmioty: Opętane Lustro (Haunted Mirror)</li>
+<li>01:56 | Przeklęte Przedmioty: Krąg Przywołań (Summoning Circle)</li>
+<li>02:57 | Przeklęte Przedmioty: Karty Tarota (Tarot Cards)</li>
+<li>03:23 | Przeklęte Przedmioty: Tablica Ouija (Ouija Board)</li>
+</ul>
+<h3 id="transkrypcja">Transkrypcja</h3>
+<h3>Wstęp</h3>
+<p>Przeklęte Przedmioty w Phasmophobia w skrócie, w 4 minuty. W grze istnieje 6 Przeklętych Przedmiotów, z których każdy ma inne zastosowanie i efekt.</p>
+<h3>Przeklęte Przedmioty: Pozytywka</h3>
+<p>Pozytywki można użyć tylko raz.
+Aby użyć Pozytywki, weź ją do ręki i naciśnij RMB.
+Po uruchomieniu Pozytywka zacznie grać, a duch będzie nucić jej melodię, co wskaże jego lokalizację.
+Użycie zostanie przerwane, jeśli duch dotknie użytkownika, Pozytywka zostanie rzucona lub duch porusza się przez ponad 5 sekund.</p>
+<p>Można położyć Pozytywkę, aby uniknąć przeklętego polowania.
+Gdy Pozytywka zostanie przerwana, duch rozpocznie przeklęte polowanie.</p>
+<ul>
+<li>Jeśli, na przykład, zdrowie psychiczne gracza spadnie do zera przed przerwaniem, będzie to normalne polowanie.</li>
+<li>Podczas używania Pozytywki duch może wciąż interagować lub rozpocząć normalne polowanie.</li>
+<li>Cała melodia zabiera około 75% zdrowia psychicznego.</li>
+<li>Jeśli gracz jest wystarczająco daleko, aby nie słyszeć Pozytywki, nie traci zdrowia psychicznego.</li>
+<li>Shade ma szansę pojawić się jako cień.</li>
+</ul>
+<h3>Przeklęte Przedmioty: Laleczka Voodoo</h3>
+<p>Laleczka ma 10 szpilek.
+Każda interakcja to wbicie jednej szpilki.
+Każde wbicie szpilki zabiera 5% zdrowia psychicznego.
+Użycie laleczki pomaga szybciej zbierać dowody, wymuszając interakcję z książką, projektorem DOTS, drzwiami, oknem lub przełącznikiem światła.
+Wbicie szpilki w serce oznacza utratę 10% zdrowia psychicznego i przeklęte polowanie.
+Jeśli gracz ma mniej zdrowia psychicznego niż potrzeba, wszystkie pozostałe szpilki zostaną wbite i rozpocznie się przeklęte polowanie.</p>
+<h3>Przeklęte Przedmioty: Zaczarowane Lustro</h3>
+<p>Lustro pokazuje pokój ducha podczas używania.</p>
+<ul>
+<li>Obraz w lustrze jest na żywo (światła, gracze, ruchy).</li>
+<li>Gracz – jak w reszcie gry – nie może zobaczyć siebie.</li>
+<li>Użycie lustra zabiera 7,5% zdrowia psychicznego na sekundę.</li>
+<li>Gdy zdrowie psychiczne spadnie do zera, lustro się rozbija.</li>
+<li>Po rozbiciu lustra duch zaczyna przeklęte polowanie.</li>
+<li>Lustro można używać kilka razy, dopóki się nie rozbije.</li>
+</ul>
+<h3>Przeklęte Przedmioty: Krąg Przywołań</h3>
+<p>Krąg przywołań składa się z pięciu świec i okręgu.
+Świece należy zapalić zapalniczką.
+Każda świeca zabiera 16% zdrowia psychicznego graczy w pobliżu.
+W sumie cały krąg zabiera 80% zdrowia psychicznego.
+Po chwili świece mogą zgasnąć lub duch może je zdmuchnąć.
+Najlepiej zrobić zdjęcie kręgu przed użyciem.
+Po zapaleniu wszystkich świec duch materializuje się w centrum kręgu i stoi nieruchomo przez kilka chwil.
+Drzwi wejściowe zamykają się natychmiast po zapaleniu piątej świecy.
+Shade ma szansę pojawić się jako cień, jak w przypadku pozytywki.
+Czas od materializacji do rozpoczęcia przeklętego polowania jest liczony jako wydarzenie paranormalne.
+Krąg można użyć tylko raz.
+Krąg wywołany podczas polowania teleportuje ducha do jego centrum, zmienia polowanie w przeklęte i nie zatrzymuje ducha na kilka sekund, jak ma to miejsce przy normalnym użyciu.
+Krąg pozwala &quot;łatwo&quot; wykonać zadania takie jak usunięcie ducha, doświadczenie wydarzenia paranormalnego czy zdmuchnięcie świecy.</p>
+<h3>Przeklęte Przedmioty: Karty Tarota</h3>
+<ul>
+<li>Każde użycie talii to wyciągnięcie jednej karty.</li>
+<li>Każda talia ma 10 kart.</li>
+<li>Po wybraniu każda karta zostaje spalona z odpowiadającym kolorem.</li>
+<li>Karty mogą się powtarzać.
+Zużycie wszystkich kart wydłuża kolejne polowania, zmieniając je w przeklęte polowania.</li>
+<li>Karty wyciągnięte podczas polowania stają się kartami Głupca i nie mają efektu.</li>
+<li>Karty mogą zwiększać lub zmniejszać zdrowie psychiczne, wymuszać interakcje, zabijać lub wskrzeszać gracza, lub wywoływać wydarzenia paranormalne.</li>
+</ul>
+<h3>Przeklęte Przedmioty: Tablica Ouija</h3>
+<p>Aby użyć tablicy Ouija, należy ją najpierw aktywować.
+Zakres odpowiedzi na głos gracza to 3 m.
+Aby wyłączyć tablicę, powiedz &quot;żegnaj&quot;.
+Tablica zabiera zdrowie psychiczne za zadanie pytania.
+Oddalenie się od tablicy lub zużycie całego zdrowia psychicznego spowoduje, że tablica spłonie.
+Spalenie tablicy kończy się przeklętym polowaniem.
+Odpowiedź na tablicy generuje EMF 2.
+Jeśli duch ma dowód EMF 5, istnieje 25% szansy na jego wystąpienie.
+Zdjęcie tablicy do 20 sekund po rozpoczęciu odpowiedzi jest uznawane za zdjęcie interakcji.
+Można zapytać ducha, gdzie jest, kiedy umarł, gdzie jest kość, ile ma lat i ile mamy zdrowia psychicznego.</p>
+<h3>Zakończenie</h3>
+<p>Dziękujemy za oglądanie - jeśli uznałeś ten poradnik za pomocny, nie zapomnij zasubskrybować, polubić lub skomentować, i zobacz inne filmy.</p>
+
+</article>
 
 
   </div>

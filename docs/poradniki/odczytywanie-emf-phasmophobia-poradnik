@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pl" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jak sprawdzać EMF? Monitor Całkowitej Aktywności #phasmophobia #poradnik 2022 </title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="">
+  <meta name="keywords"
+    content="mativizo,phasmophobia,obsideo,euro truck simulator 2,niewidomy youtuber,niewidomy influencer,mtvz">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/poradniki/odczytywanie-emf-phasmophobia-poradnik">
+  <meta property="og:title" content="Jak sprawdzać EMF? Monitor Całkowitej Aktywności #phasmophobia #poradnik 2022 ">
+  <meta property="og:description"
+    content="">
+  <meta property="og:image" content="https://mtvz.pl/imgs/logo.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="https://mtvz.pl/imgs/logo.jpg">
+  <meta property="twitter:url" content="/poradniki/odczytywanie-emf-phasmophobia-poradnik">
+  <meta property="twitter:title" content="Jak sprawdzać EMF? Monitor Całkowitej Aktywności #phasmophobia #poradnik 2022 ">
+  <meta property="twitter:description" content="">
+  <meta property="twitter:image" content="https://mtvz.pl/imgs/logo.jpg">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swa" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/tutorials/timelines/timeline-1/assets/css/timeline-1.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#222222">
+
+  <style>
+  html, body {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .text-upper {
+    text-transform: uppercase;
+  }
+
+  .text-italic {
+    font-style: italic;
+  }
+
+    .bg-darker {
+      background-color: #111;
+    }
+    .bg-special-1 {
+      background: rgb(2,0,36);
+background: linear-gradient(53deg, rgba(2,0,36,1) 4%, rgba(0,0,22,1) 40%, rgba(11,150,179,1) 100%);
+    }
+
+    .bg-overlay {
+      background-color: rgba(0,0,0,.7);
+    }
+
+    .bg-main {
+      background: rgb(0,0,22);
+      background: linear-gradient(53deg, rgba(0,0,11,1) 35%, rgba(1,0,18,1) 62%, rgba(12,35,66,1) 100%);
+    }
+
+    .card {
+      background-color: #050522;
+    }
+  </style>
+</head>
+
+<body data-bs-theme="dark" class="bg-main">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-special-1 px-3 fixed-top">
+    <a class="navbar-brand" href="/#">Mativizo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav m-auto ms-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="/#nowe-filmy">Nowości</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="ddfilmy" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Filmy
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/#serie">Serie Filmów</a>
+            <a class="dropdown-item" href="/#poradniki">Poradniki</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="ddKanal" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Kanał
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/#osiagniecia">Osiągnięcia</a>
+            <a class="dropdown-item" href="/#wspolpraca">Współpraca</a>
+            <a class="dropdown-item" href="/kontakt">Kontakt</a>
+          </div>
+        </li>
+        
+      </ul>
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://mtvz.pl/site/youtube">YouTube 🎬</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://mtvz.pl/site/tiktok">TikTok 🎵</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://mtvz.pl/site/patronite">Patronite 🔥</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://instagram.com/matidziad">Instagram 📸</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="my-5 pt-5 text-white rounded text-center">
+    <h1 class="h4 text-italic text-uppercase">Jak sprawdzać EMF? Monitor Całkowitej Aktywności #phasmophobia #poradnik 2022 </h1>
+    <p class="my-4 w-50 m-auto"></p>
+    <a class="btn btn-danger btn-sm m-2" href="https://mtvz.pl/site/youtube">Subskrybuj na YouTube</a>
+    <a class="btn btn-dark btn-sm m-2" href="https://mtvz.pl/site/tiktok">Obserwuj na TikToku</a>
+    <a class="btn btn-warning btn-sm m-2" href="https://mtvz.pl/site/patronite">Wspieraj na Patronite</a>
+    <a class="btn btn-primary btn-sm m-2" href="https://instagram.com/matidziad">Obserwuj na Instagramie</a>
+  </div>
+
+  <div class="container-fluid">
+    
+
+<article class="container">
+  <iframe class="w-75 d-block m-auto mb-5" style="height: 50vh;" src="https://www.youtube-nocookie.com/embed/cZcP5IT_lds" title="Jak sprawdzać EMF? Monitor Całkowitej Aktywności #phasmophobia #poradnik 2022 " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  <div class="container my-5 alert bg-special-1 p-3 border-rounded">
+    <div class="row">
+      <div class="col-8">
+        <p class="h4">Hej Ty!</p>
+        <p>Wolisz wersję tekstową? <span class="text-primary">Jak sprawdzać EMF? Monitor Całkowitej Aktywności #phasmophobia #poradnik 2022 </span> w formie tekstowej poniżej.</p>
+      </div>
+      <div class="col-4 py-5">
+        <a class="btn d-block btn-danger" role="button" href="#transkrypcja">Zobacz Transkrypcję Filmu!</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <p>Sat Aug 20 2022 02:00:00 GMT+0200 (czas środkowoeuropejski letni)</p>
+  </div>
+  <h1>Odczytywanie EMF z czytnika i z tablicy aktywności w Phasmophobia</h1>
+<p>👋 Jak używać monitora Całkowita Aktywność w vanie? Jak w ogóle działa czytnik EMF (EMF Reader)? Kiedy jest EMF 5? Mechanika działania monitora Całkowita Aktywność w Phasmophobii zmieniała się na przestrzeni czasu, aby trochę utrudnić grę, ale nadal da się wyczytać z niego ciekawe informacje. Obejrzyj do końca i daj znać czy warto siedzieć w vanie. 🤔</p>
+<p>⏲ Spis Treści:
+00:00 - Wstęp
+00:07 - Jak działa EMF Reader / Czytnik EMF?
+00:19 - Co oznaczają dane wartości EMF?
+01:07 - Zasięg i priorytety Czytnika EMF.
+01:34 - Kiedy jest EMF 5? Co to jest EMF 5?
+02:03 - Total Activity / Całkowita Aktywność - Podstawy działania
+02:55 - Konwersja: Wartości z Czytnika EMF a wartości na tablicy Całkowita Aktywność
+03:43 - Losowa zmienna w wartościach wyświetlanych na tablicy Total Activity / Całkowita Aktywność
+04:34 - Jak czytać monitor Total Activity / Całkowita Aktywność?
+04:49 - Przykładowy odczyt EMF z tablicy (1)
+05:13 - Przykładowy odczyt EMF z tablicy (2)
+05:20 - Przykładowy odczyt EMF z tablicy (3)
+05:49 - Przykładowy odczyt EMF z tablicy (4)
+06:22 - Przykładowy odczyt EMF z tablicy (5) - EMF 5
+06:49 - Podsumowanie wszystkich informacji</p>
+<h3 id="transkrypcja">Transkrypcja</h3>
+<h3>Wstęp</h3>
+<p>Czy wiesz, jak prawidłowo używać Czytnika EMF i Monitora Całkowitej Aktywności w furgonetce?</p>
+<h3>Jak działa Czytnik EMF?</h3>
+<p>Zanim przejdziemy do Całkowitej Aktywności, musimy uporządkować wiedzę i fakty dotyczące samego Czytnika EMF.</p>
+<h3>Co oznaczają dane wartości EMF?</h3>
+<p>Odczyty na Czytniku EMF wskazują następujące sytuacje:</p>
+<ul>
+<li><strong>EMF 1</strong> - niebieski - urządzenie włączone.</li>
+<li><strong>EMF 2</strong> - zielony - interakcja z obiektem, tj. każda interakcja z drzwiami, bezpiecznikami, radiem, telefonem, włącznikiem światła, prysznicem, zlewem (raczej kranem), alarmem samochodowym, oknem. Otrzymamy również EMF 2 podczas odpowiedzi na Tablicę Ouija, teleportacji obiektu, pisania w książce lub użycia przez niektóre duchy (Jinn, Poltergeist, Wraith, Phantom) ich umiejętności.</li>
+<li><strong>EMF 3</strong> - żółty - rzucenie obiektu.</li>
+<li><strong>EMF 4</strong> - pomarańczowy - manifestacja / zdarzenie z duchem.</li>
+<li><strong>EMF 5</strong> - czerwony - dowód.</li>
+</ul>
+<h3>Zasięg i priorytety Czytnika EMF</h3>
+<p>Jeśli w pobliżu urządzenia (w zasięgu 1,5 m) występuje więcej niż jedno zdarzenie, urządzenie pokaże wartość dla zdarzenia o najwyższym odczycie. Krótko mówiąc: manifestacja + ruch drzwi to EMF 4. Rzucenie kubka i włączenie światła to EMF 3. Każdy odczyt jest utrzymywany przez 20 sekund.</p>
+<h3>Kiedy jest EMF 5? Co to jest EMF 5?</h3>
+<p>Kiedy można uzyskać EMF 5? Warto zauważyć, że EMF 5 nie jest osobnym typem zdarzenia. Jeśli duch ma dowód w postaci EMF 5, to każde zdarzenie powodujące EMF 2 i EMF 3 ma 25% szans na bycie EMF 5. Odczyty podczas polowania są losowe, więc nie bierzemy ich pod uwagę.</p>
+<h3>Total Activity / Całkowita Aktywność - Podstawy działania</h3>
+<p>Teraz, gdy wszystko zostało wyjaśnione, możemy przejść do aktywności na monitorze w furgonetce, czyli Całkowitej Aktywności. Całkowita Aktywność zmieniała się nieco z czasem... Warto więc odświeżyć sobie, jak działa ten przydatny monitor.</p>
+<h3>Konwersja: Wartości z Czytnika EMF a wartości na tablicy Całkowita Aktywność</h3>
+<p>Całkowita Aktywność pozwala na odczyty w zakresie od 0 do 10. Całkowita Aktywność nie odzwierciedla Czytnika EMF, ponieważ wyświetla dane o wszystkich zdarzeniach, podczas gdy sam czytnik informuje o zdarzeniach w promieniu około 1,5 m. Choć każde polowanie oznacza odczyt 10, nie każdy odczyt 10 oznacza polowanie. Kolejne lub krótkotrwałe zdarzenia sumują się, generując odczyty 7, 8 lub nawet 10. Ta funkcjonalność pozwala na znalezienie niektórych duchów, takich jak Bliźniaki, bez żadnych dowodów.</p>
+<h3>Losowa zmienna w wartościach wyświetlanych na tablicy Total Activity / Całkowita Aktywność</h3>
+<p>Każda wartość na monitorze może być dodatkowo zmieniona o -1 jednostkę lub +1 jednostkę. Dlatego wiele zdarzeń może się pokrywać swoimi odczytami. Interakcja z obiektem, tj. EMF 2, może pokazywać wartości 0, 1 lub 2 na monitorze. Rzucenie obiektu, tj. EMF 3, może pokazywać wartości 1, 2 lub 3 na monitorze. Zdarzenie z duchem, tj. EMF 4, może przyjąć wartość 2, 3 lub 4. Dowód w postaci EMF 5 może pokazywać wartości 3, 4 lub 5 na monitorze. Teraz, po tej dodatkowej trudności, wydaje się, że odczytanie EMF 5 z monitora jest niemożliwe. Jednakże, gdy przyjrzymy się głębiej, czyste 5 jednostek na wykresie może być tylko EMF 5.</p>
+<h3>Jak czytać monitor Total Activity / Całkowita Aktywność?</h3>
+<p>Jak prawidłowo odczytywać wartości? Musimy zawsze pamiętać, że zdarzenia są addytywne i mogą występować jedno po drugim lub jednocześnie. Mam dla Was kilka przykładowych odczytów z poprawnymi wartościami.</p>
+<h3>Przykładowy odczyt EMF z tablicy (1)</h3>
+<p>Na tym wykresie widzimy dwa szczyty i dwa spadki. Oczywiście, są to dwa zdarzenia (po 2 jednostki każde), które się pokrywają. Od prawej: pierwszy punkt to pierwsze zdarzenie. Skok z 0 na 2 oznacza EMF 2, EMF 3 lub EMF 4. W kroku 2 mamy tę samą sytuację (różnica 2 - EMF 2/3/4). Ponieważ trwa to 20 sekund i zdarzenia występują jedno po drugim, pokrywają się, więc linia idzie do 4.</p>
+<h3>Przykładowy odczyt EMF z tablicy (2)</h3>
+<p>Tym razem mamy jedno zdarzenie. Skok o 1 jednostkę oznacza EMF 2 lub EMF 3.</p>
+<h3>Przykładowy odczyt EMF z tablicy (3)</h3>
+<p>Trzeci wykres jest bardziej złożony. Mamy trzy zdarzenia:</p>
+<ul>
+<li>Pierwsze od prawej od 0 do 1, tj. EMF 2 lub EMF 3.</li>
+<li>Następne - od 1 do 3, co daje 2 jednostki, tj. EMF 2, EMF 3 lub EMF 4.</li>
+<li>Pierwsze zdarzenie kończy się w punkcie 3, co nieco komplikuje wykres, ale damy radę.</li>
+<li>Trzecie zdarzenie zaczyna się w punkcie 4. To skok z 2 na 5 (5 - 2 = 3), tj. EMF 3, EMF 4 lub EMF 5. Jednak nie jest to sytuacja, w której możemy zaznaczyć dowód EMF 5.</li>
+</ul>
+<h3>Przykładowy odczyt EMF z tablicy (4)</h3>
+<p>Na czwartym wykresie mamy ponownie złożoną sytuację, ale już na pierwszy rzut oka widać, że nie ma tu EMF 5. Nie mamy skoku o 5 jednostek. Mamy zdarzenie z 0 na 4, tj. EMF 4 lub EMF 5, lub podwójną interakcję - nie zapominajmy o nich! Następnie skok o 1 (z 4 na 5), tj. EMF 2 lub EMF 3. I trzecie zdarzenie, tj. wzrost z 5 na 8 - 3 jednostki różnicy, EMF 3/4/5. Chociaż wartość 8 jest wysoka, oznacza to tylko, że duch wykonał 3 akcje w krótkim czasie.</p>
+<h3>Przykładowy odczyt EMF z tablicy (5) - EMF 5</h3>
+<p>Jest też piąty wykres. Tutaj widzimy dwa zdarzenia bardzo blisko siebie. Pierwsze od 0 do 3, co oznacza EMF 3/4/5, a drugie od 3 do 8, co daje 5 jednostek różnicy. Jeśli drugie zdarzenie nie jest podwójną interakcją - a uwierz mi, że nie jest - to mamy tutaj EMF 5. Jeśli nie spieszymy się, warto spojrzeć ponownie za jakiś czas, aby zobaczyć, czy znajdziemy różnicę 5 jednostek. Dwa potwierdzenia to dwa razy więcej niż jedno potwierdzenie.</p>
+<h3>Podsumowanie wszystkich informacji</h3>
+<p>Czas na krótkie podsumowanie, ponieważ jest to dużo treści do przyswojenia naraz. Czytnik EMF działa w zasięgu około 1,5 m i wskazuje wartość dla głównego zdarzenia. Jeśli typ ducha ma dowód w postaci EMF 5, istnieje 25% szans, że EMF 2 lub EMF 3 pojawi się jako odczyt EMF 5.</p>
+<p>Monitor Aktywności pokazuje wartości o 1 jednostkę niższe niż Czytnik EMF.
+Wartości na monitorze mogą się sumować, a każda z nich może być dodatkowo zmieniona o -1 lub +1 jednostkę.
+Wykres pokazujący 5 jednostek ma wysokie prawdopodobieństwo pokazania dowodu EMF 5 (chyba że wystąpią podwójne interakcje, np. dwukrotne spłukanie).
+Wykres pokazujący 4 jednostki może reprezentować dowód EMF 5, o ile inny gracz może potwierdzić, że nie było wtedy Zdarzenia z Duchem ani sumującej się interakcji.
+Każde polowanie generuje odczyt 10, ale nie każdy odczyt 10 oznacza polowanie.
+Zakończenie
+Mam nadzieję, że teraz - jeśli wcześniej nie znałeś lub nie byłeś zaznajomiony z dokładnym używaniem Czytnika EMF i Monitora Całkowitej Aktywności - teraz już wiesz, jak można wykorzystać te urządzenia na swoją korzyść. Pamiętaj jednak, że gra ma przede wszystkim sprawiać radość. Nie ma potrzeby spędzać czasu siedząc w furgonetce i analizując wszystkie te wykresy. Wejdź do środka, zgub się, krzyknij trochę i baw się dobrze!</p>
+
+</article>
+
+
+  </div>
+
+    
+
+  <div class="container w-100 mx-0 my-5 py-5">
+    <div class="row">
+      <div class="col-12 col-lg-4">
+        <h5>Social Media</h5>
+        <p>
+          <a href="https://mtvz.pl/site/youtube">Subskrybuj Mativizo na YouTube!</a>
+        </p>
+        <p>
+          <a href="https://mtvz.pl/site/tiktok">Obserwuj na TikTok!</a>
+        </p>
+        <p>
+          <a href="https://instagram.com/matidziad">Obserwuj na Instagramie!</a>
+        </p>
+        <p>
+          <a href="https://mtvz.pl/site/patronite">Wspieraj na Patronite!</a>
+        </p>
+      </div>
+      <div class="col-12 col-lg-4">
+        <h5>Szybkie Menu</h5>
+        <p>
+          <a href="/#">Strona Główna</a>
+        </p>
+        <p>
+          <a href="/#nowe-filmy">Noew Filmy</a>
+        </p>
+        <p>
+          <a href="/#serie">Serie</a>
+        </p>
+        <p>
+          <a href="/#poradniki">Poradniki</a>
+        </p>
+        <p>
+          <a href="/#osiagniecia">Osiągnięcia</a>
+        </p>
+      </div>
+      <div class="col-12 col-lg-4">
+        <h5>Kontakt</h5>
+        <p class="mt-3">Kontakt Biznesowy / Współpraca:</p>
+        <p><a href="mailto:mativizo@outlook.com">mativizo@outlook.com</a></p>
+        <p class="mt-3">Kontakt (Instagram):</p>
+        <p><a href="https://instagram.com/matidziad">DM @matidziad</a></p>
+        <p class="mt-3">Kontakt (TikTok):</p>
+        <p><a href="https://mtvz.pl/site/tiktok">DM @mativizo</a></p>
+      </div>
+  </div>
+  <div class="container-fluid text-center">
+        <p>Mativizo &copy; 2024</p>
+    </div>
+
+    <div class="text-muted">
+      <p class="w-lg-25">
+        Witaj w naszym lekkim kąciku internetu! Ta strona jest tak prosta, jak to tylko możliwe - bez serwerów, tylko statyczne pliki HTML. To jak cyfrowa książka, ale o wiele fajniejsza! A co najlepsze? Jesteśmy na ścisłej diecie bez ciasteczek i nie przechowujemy żadnych Twoich danych. Więc ciesz się swoją wizytą, wiedząc, że nie zostawiasz za sobą żadnych cyfrowych śladów. Miłego przeglądania!
+      </p>
+    </div>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+</html>

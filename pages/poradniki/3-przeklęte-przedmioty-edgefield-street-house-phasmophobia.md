@@ -5,6 +5,7 @@ date: 2022-07-13
 ytid: krVDikCm9WE
 layout: post.njk
 length: "02:21"
+permalink: "poradniki/przeklęte-przedmioty-edgefield-street-house-phasmophobia-poradnik"
 ---
 
 # Phasmophobia: Edgefield Street House | Przeklęte Przedmioty

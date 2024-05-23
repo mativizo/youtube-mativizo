@@ -7,7 +7,7 @@ description: "Dane kontaktowe i informacje na temat tego, jak możesz się ze mn
 
 <div class="row">
 <div class="col-12 col-lg-6">
-<img src="https://mtvz.pl/imgs/logo.jpg" class="w">
+<img src="/imgs/logo.jpg" class="w-100">
 </div>
 <div class="col-12 col-lg-6">
 
