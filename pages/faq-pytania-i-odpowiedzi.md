@@ -13,7 +13,7 @@ description: "Dane kontaktowe i informacje na temat tego, jak możesz się ze mn
       "name": "Kim jest Mativizo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mativizo, inaczej Mateusz to twórca treści związanych z grami, muzyką i humorem. Największą popularność na kanale zyskały jego poradniki z gry Phasmophobia i shorty z gry Euro Truck Simulator 2. Niewidomy (legally blind) YouTuber, TikToker, czy jak chcesz go nazwać. Jeszcze przed 30-tką, ale już nie dużo czasu zostało. Z zawodu programista backendowy, z zajawki twórca aplikacji i gier, z fascynacji twórca. Znajdziesz go na <a href="https://link.mtvz.pl/sub">YouTube</a>, <a href="https://link.mtvz.pl/tiktok">TikTok</a>, <a href="https://link.mtvz.pl/ig">Instagramie</a> i <a href="https://link.mtvz.pl/wspieraj">Patronite</a>."
+        "text": "Mativizo, inaczej Mateusz to twórca treści związanych z grami, muzyką i humorem. Największą popularność na kanale zyskały jego poradniki z gry Phasmophobia i shorty z gry Euro Truck Simulator 2. Niewidomy (legally blind) YouTuber, TikToker, czy jak chcesz go nazwać. Jeszcze przed 30-tką, ale już nie dużo czasu zostało. Z zawodu programista backendowy, z zajawki twórca aplikacji i gier, z fascynacji twórca. Znajdziesz go na <a href=\"https://link.mtvz.pl/sub\">YouTube</a>, <a href=\"https://link.mtvz.pl/tiktok\">TikTok</a>, <a href=\"https://link.mtvz.pl/ig\">Instagramie</a> i <a href=\"https://link.mtvz.pl/wspieraj\">Patronite</a>."
       }
     }, {
       "@type": "Question",
