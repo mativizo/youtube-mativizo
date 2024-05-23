@@ -5,7 +5,7 @@ date: 2021-12-04
 ytid: fOQaLPZ0gzE
 layout: post.njk
 length: "08:36"
-permalink: "poradniki/podstawowy-tuning-w-forza-horizon-5-poradnik"
+permalink: "poradniki/podstawowy-tuning-w-forza-horizon-5-poradnik/"
 ---
 
 # Prosty poradnik do Forza Horizon 5

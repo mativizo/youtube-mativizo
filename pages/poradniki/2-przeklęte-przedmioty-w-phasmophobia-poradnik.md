@@ -5,7 +5,7 @@ date: 2021-07-07
 ytid: IGelGHCoSW8
 layout: post.njk
 length: "04:13"
-permalink: "poradniki/przeklęte-przedmioty-w-phasmophobia"
+permalink: "poradniki/przeklęte-przedmioty-w-phasmophobia/"
 ---
 
 # Phasmophobia: Przeklęte Przedimoty w skrócie

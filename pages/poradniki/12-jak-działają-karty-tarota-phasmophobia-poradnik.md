@@ -5,7 +5,7 @@ date: 2022-08-17
 ytid: D3Wu1tU4c1k
 layout: post.njk
 length: "04:15"
-permalink: "/poradniki/jak-działają-karty-tarota-phasmophobia-poradnik"
+permalink: "poradniki/jak-działają-karty-tarota-phasmophobia-poradnik/"
 ---
 
 # Karty Tarota - Phasmophobia

@@ -5,7 +5,7 @@ date: 2022-07-08
 ytid: DcXaSpAoDKw
 layout: post.njk
 length: "03:47"
-permalink: "/poradniki/przeklęte-przedmioty-willow-street-house-phasmophobia-poradnik"
+permalink: "poradniki/przeklęte-przedmioty-willow-street-house-phasmophobia-poradnik/"
 ---
 
 # Phasmophobia: Willow Street House | Przeklęte Przedmioty
