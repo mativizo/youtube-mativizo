@@ -78,8 +78,6 @@
         .then(async (stream) => {
             video.srcObject = stream
             video.play()
-
-            cameras = await getCams()        
         })
         .catch((error) => {
             console.error("Error accessing the webcam", error);
@@ -196,10 +194,16 @@
     })
 
 
-async function getCams() {
-    const devices = await navigator.mediaDevices.enumerateDevices();
-    return devices.filter(device => device.kind === 'videoinput');
-}
+    navigator.mediaDevices.enumerateDevices().then(function (devices) {
+            for(var i = 0; i < devices.length; i ++){
+                var device = devices[i];
+                if (device.kind === 'videoinput') {
+                    cameras = device
+                    console.log(device)
+                    alert(device)
+                }
+            };
+        });
 
 let cam_id = 0
 
