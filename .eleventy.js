@@ -116,6 +116,16 @@ module.exports = function(eleventyConfig) {
         return tutorials;
     });
 
+    function sortByOrder(values) {
+        let vals = [...values];     // this *seems* to prevent collection mutation...
+        return vals.sort((a, b) => Math.sign(a.data.order - b.data.order));
+    }
+    
+    eleventyConfig.addFilter("sortByDate", function(values) {
+        let vals = [...values];
+        return vals.sort((a, b) => { return a.date < b.date });
+    });
+
     return {
       dir: {
         input: "pages",

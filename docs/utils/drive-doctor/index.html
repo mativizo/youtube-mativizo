@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 30px;
+            padding: 0;
+            margin: 0;
+        }
+        html, body {
+            background-color: black;
+            color: white;
+        }
+
+        video {
+            display: block;
+            width: 100%;
+        }
+        canvas {
+            display: block;
+            width: 100%;
+        }
+
+        button {
+            padding: 20px;
+            background-color: red;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <button id="ad"> - </button>
+        <button id="ltd"> - </button> <span id="lt">...</span> <button id="ltu"> + </button>
+        <button id="htd"> - </button> <span id="ht">...</span> <button id="htu"> + </button>
+        <button id="au"> + </button>
+    </p>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <video id="video" width="640" height="480" autoplay></video>
+    
+    <script src="https://docs.opencv.org/4.x/opencv.js"></script>
+<script>
+    const video = document.getElementById('video')
+    const canvas = document.getElementById('canvas')
+    const context = canvas.getContext('2d')
+
+    const lt = document.getElementById('lt')
+    const ht = document.getElementById('ht')
+    const ad = document.getElementById('ad')
+    const au = document.getElementById('au')
+
+    let is_ready = false
+
+    video.addEventListener('loadedmetadata', () => {
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        is_ready = true
+    });
+
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then((stream) => {
+            video.srcObject = stream
+            video.play()
+        })
+        .catch((error) => {
+            console.error("Error accessing the webcam", error);
+        });
+    
+
+
+
+    let low_thresh = 150;
+    let high_thresh = 250;
+    
+
+    setInterval(() => {
+
+        if (is_ready) {
+            if (cv.Mat && video.readyState === video.HAVE_ENOUGH_DATA) {
+                context.drawImage(video, 0, 0, canvas.width, canvas.height);
+                let src = cv.imread('canvas');
+                let dst = new cv.Mat(src.rows, src.cols, cv.CV_8UC3);
+                let edges = new cv.Mat();
+                let lines = new cv.Mat();
+                cv.cvtColor(src, edges, cv.COLOR_RGBA2GRAY, 0);
+                cv.Canny(edges, edges, low_thresh, high_thresh, 3);
+                cv.HoughLinesP(edges, lines, 1, Math.PI / 180, 2, 20, 40);
+
+                context.clearRect(0, 0, canvas.width, canvas.height)
+                dst.setTo(new cv.Scalar(0, 0, 0, 255));
+
+                // Draw lines on dst
+                for (let i = 0; i < lines.rows; ++i) {
+                    let startPoint = new cv.Point(lines.data32S[i * 4], lines.data32S[i * 4 + 1]);
+                    let endPoint = new cv.Point(lines.data32S[i * 4 + 2], lines.data32S[i * 4 + 3]);
+                    cv.line(dst, startPoint, endPoint, [255, 255, 255, 255], 3);
+                }
+
+                // Display dst
+                cv.imshow('canvas', dst);
+                src.delete(); dst.delete(); edges.delete(); lines.delete();
+            }
+        
+        }
+
+
+    }, 2000)
+
+    
+
+
+    ltd.addEventListener('click', (e) => {
+        low_thresh -= 1;
+        lt.innerHTML = low_thresh
+    })
+
+    ltu.addEventListener('click', (e) => {
+        low_thresh += 1;
+        lt.innerHTML = low_thresh
+    })
+
+    htd.addEventListener('click', (e) => {
+        high_thresh -= 1;
+        ht.innerHTML = high_thresh
+    })
+
+    htu.addEventListener('click', (e) => {
+        high_thresh += 1;
+        ht.innerHTML = high_thresh
+    })
+
+    ad.addEventListener("click", (e) => {
+        low_thresh -= 1;
+        lt.innerHTML = low_thresh
+        high_thresh -= 1;
+        ht.innerHTML = high_thresh
+    })
+    au.addEventListener("click", (e) => {
+        low_thresh += 1;
+        lt.innerHTML = low_thresh
+        high_thresh += 1;
+        ht.innerHTML = high_thresh
+    })
+
+    console.log("e")
+
+</script>
+</body>
+</html>
