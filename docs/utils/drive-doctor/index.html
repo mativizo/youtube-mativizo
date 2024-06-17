@@ -88,7 +88,14 @@
         const constraintsx = {
             video: { deviceId: { exact: cameraId } }
         };
-        return await navigator.mediaDevices.getUserMedia(constraintsx);
+        return await navigator.mediaDevices.getUserMedia(constraintsx)
+            .then(async (stream) => {
+                video.srcObject = stream
+                video.play()
+            })
+            .catch((error) => {
+                console.error("Error accessing the webcam", error);
+            });
     }
 
 
