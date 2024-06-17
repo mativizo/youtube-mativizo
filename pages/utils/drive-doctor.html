@@ -211,7 +211,7 @@ switch_cam_button.addEventListener("click", async (e) => {
     if (cameras.length > 0) {
         cam_id += 1
         if (cam_id > cameras.length - 1) cam_id = 0
-        await switchCamera(cam_id)
+        await switchCamera(cameras[cam_id].deviceId)
     }
 })
 
