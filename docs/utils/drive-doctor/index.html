@@ -13,7 +13,7 @@
         }
         html, body {
             background-color: black;
-            color: white;
+            color: white!important;
         }
 
         video {
@@ -40,6 +40,7 @@
         <button id="au"role="button"> + </button>
         <button id="edges" role="button">Edges: on</button>
         <button id="mask" role="button">Mask: on</button>
+        <button id="cam" role="button">Switch Cam</button>
     </p>
     <canvas id="canvas" width="640" height="480"></canvas>
     <video id="video" width="640" height="480" autoplay></video>
@@ -49,6 +50,7 @@
     const video = document.getElementById('video')
     const canvas = document.getElementById('canvas')
     const context = canvas.getContext('2d')
+    const switch_cam_button = document.getElementById('cam')
 
     const lt = document.getElementById('lt')
     const ht = document.getElementById('ht')
@@ -69,16 +71,27 @@
         is_ready = true
     });
 
+    let cameras = null;
+
+
     navigator.mediaDevices.getUserMedia({ video: true })
-        .then((stream) => {
+        .then(async (stream) => {
             video.srcObject = stream
             video.play()
+
+            cameras = await getCams()        
         })
         .catch((error) => {
             console.error("Error accessing the webcam", error);
         });
     
 
+    async function switchCamera(cameraId) {
+        const constraintsx = {
+            video: { deviceId: { exact: cameraId } }
+        };
+        return await navigator.mediaDevices.getUserMedia(constraintsx);
+    }
 
 
     let low_thresh = 150;
@@ -181,6 +194,22 @@
         mask_enabled = !mask_enabled
         mask_button.innerHTML = (mask_enabled) ? "Mask: on" : "Mask: off"
     })
+
+
+async function getCams() {
+    const devices = await navigator.mediaDevices.enumerateDevices();
+    return devices.filter(device => device.kind === 'videoinput');
+}
+
+let cam_id = 0
+
+switch_cam_button.addEventListener("click", async (e) => {
+    if (cameras.length > 0) {
+        cam_id += 1
+        if (cam_id > cameras.length - 1) cam_id = 0
+        await switchCamera(cam_id)
+    }
+})
 
 </script>
 </body>
