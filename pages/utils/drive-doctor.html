@@ -205,7 +205,7 @@
             for(var i = 0; i < devices.length; i ++){
                 var device = devices[i];
                 if (device.kind === 'videoinput') {
-                    cameras = device
+                    cameras[cameras.length] = device
                     console.log(device)
                     alert(device)
                 }
