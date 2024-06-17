@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
         * {
-            font-size: 30px;
+            font-size: 24px;
             padding: 0;
             margin: 0;
         }
@@ -26,18 +26,20 @@
         }
 
         button {
-            padding: 20px;
-            background-color: red;
-            margin: 10px;
+            padding: 5px;
+            background-color: navy;
+            margin: 5px;
         }
     </style>
 </head>
 <body>
     <p>
-        <button id="ad"> - </button>
-        <button id="ltd"> - </button> <span id="lt">...</span> <button id="ltu"> + </button>
-        <button id="htd"> - </button> <span id="ht">...</span> <button id="htu"> + </button>
-        <button id="au"> + </button>
+        <button id="ad"role="button"> - </button>
+        <button id="ltd"role="button"> - </button> <span id="lt">...</span> <button id="ltu"> + </button>
+        <button id="htd"role="button"> - </button> <span id="ht">...</span> <button id="htu"> + </button>
+        <button id="au"role="button"> + </button>
+        <button id="edges" role="button">Edges: on</button>
+        <button id="mask" role="button">Mask: on</button>
     </p>
     <canvas id="canvas" width="640" height="480"></canvas>
     <video id="video" width="640" height="480" autoplay></video>
@@ -52,6 +54,12 @@
     const ht = document.getElementById('ht')
     const ad = document.getElementById('ad')
     const au = document.getElementById('au')
+
+    const edges_button = document.getElementById("edges")
+    let edges_enabled = true
+
+    const mask_button = document.getElementById("mask")
+    let mask_enabled = true
 
     let is_ready = false
 
@@ -74,79 +82,105 @@
 
 
     let low_thresh = 150;
-    let high_thresh = 250;
+    let high_thresh = 200;
     
 
     setInterval(() => {
+    if (is_ready) {
+        if (cv.Mat && video.readyState === video.HAVE_ENOUGH_DATA) {
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            let src = cv.imread('canvas');
+            let dst = new cv.Mat(src.rows, src.cols, cv.CV_8UC3);
+            let gray = new cv.Mat();
+            let edges = new cv.Mat();
+            let lines = new cv.Mat();
+            let mask = new cv.Mat();
+            
+            // Convert to grayscale
+            cv.cvtColor(src, gray, cv.COLOR_RGBA2GRAY, 0);
+            
+            // Canny edge detection
+            cv.Canny(gray, edges, low_thresh, high_thresh, 3);
+            
+            // Hough Line Transform
+            cv.HoughLinesP(edges, lines, 1, Math.PI / 180, 2, 20, 40);
+            
+            if (mask_enabled) {
+                // Threshold for white areas
+                cv.threshold(gray, mask, 240, 255, cv.THRESH_BINARY);
 
-        if (is_ready) {
-            if (cv.Mat && video.readyState === video.HAVE_ENOUGH_DATA) {
-                context.drawImage(video, 0, 0, canvas.width, canvas.height);
-                let src = cv.imread('canvas');
-                let dst = new cv.Mat(src.rows, src.cols, cv.CV_8UC3);
-                let edges = new cv.Mat();
-                let lines = new cv.Mat();
-                cv.cvtColor(src, edges, cv.COLOR_RGBA2GRAY, 0);
-                cv.Canny(edges, edges, low_thresh, high_thresh, 3);
-                cv.HoughLinesP(edges, lines, 1, Math.PI / 180, 2, 20, 40);
-
-                context.clearRect(0, 0, canvas.width, canvas.height)
-                dst.setTo(new cv.Scalar(0, 0, 0, 255));
-
+                // Bitwise operation to keep only the white areas
+                cv.bitwise_and(src, src, dst, mask);
+            }
+            
+            
+            if (edges_enabled) {
                 // Draw lines on dst
                 for (let i = 0; i < lines.rows; ++i) {
                     let startPoint = new cv.Point(lines.data32S[i * 4], lines.data32S[i * 4 + 1]);
                     let endPoint = new cv.Point(lines.data32S[i * 4 + 2], lines.data32S[i * 4 + 3]);
-                    cv.line(dst, startPoint, endPoint, [255, 255, 255, 255], 3);
+                    cv.line(dst, startPoint, endPoint, [100, 100, 255, 255], 3); // Use a different color for lines if needed
                 }
-
-                // Display dst
-                cv.imshow('canvas', dst);
-                src.delete(); dst.delete(); edges.delete(); lines.delete();
             }
-        
+            
+            
+            // clear
+            context.clearRect(0,0, canvas.width, canvas.height)
+            
+            // Display dst
+            cv.imshow('canvas', dst);
+            
+            src.delete(); dst.delete(); gray.delete(); edges.delete(); lines.delete(); mask.delete();
         }
-
-
-    }, 2000)
+    }
+}, 1000/60);
 
     
 
 
     ltd.addEventListener('click', (e) => {
-        low_thresh -= 1;
+        low_thresh -= 5;
         lt.innerHTML = low_thresh
     })
 
     ltu.addEventListener('click', (e) => {
-        low_thresh += 1;
+        low_thresh += 5;
         lt.innerHTML = low_thresh
     })
 
     htd.addEventListener('click', (e) => {
-        high_thresh -= 1;
+        high_thresh -= 5;
         ht.innerHTML = high_thresh
     })
 
     htu.addEventListener('click', (e) => {
-        high_thresh += 1;
+        high_thresh += 5;
         ht.innerHTML = high_thresh
     })
 
     ad.addEventListener("click", (e) => {
-        low_thresh -= 1;
+        low_thresh -= 5;
         lt.innerHTML = low_thresh
-        high_thresh -= 1;
+        high_thresh -= 5;
         ht.innerHTML = high_thresh
     })
     au.addEventListener("click", (e) => {
-        low_thresh += 1;
+        low_thresh += 5;
         lt.innerHTML = low_thresh
-        high_thresh += 1;
+        high_thresh += 5;
         ht.innerHTML = high_thresh
     })
 
-    console.log("e")
+
+    edges_button.addEventListener("click", (e) => {
+        edges_enabled = !edges_enabled
+        edges_button.innerHTML = (edges_enabled) ? "Edges: on" : "Edges: off"
+    })
+
+    mask_button.addEventListener("click", (e) => {
+        mask_enabled = !mask_enabled
+        mask_button.innerHTML = (mask_enabled) ? "Mask: on" : "Mask: off"
+    })
 
 </script>
 </body>
