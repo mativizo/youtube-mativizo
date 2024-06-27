@@ -24,6 +24,9 @@
             display: block;
             width: 100%;
         }
+        span {
+            font-size: 40px;
+        }
 
         button {
             padding: 5px;
@@ -34,30 +37,68 @@
 </head>
 <body>
     <p>
-        <button id="ad"role="button"> - </button>
-        <button id="ltd"role="button"> - </button> <span id="lt">...</span> <button id="ltu"> + </button>
-        <button id="htd"role="button"> - </button> <span id="ht">...</span> <button id="htu"> + </button>
-        <button id="au"role="button"> + </button>
-        <button id="edges" role="button">Edges: on</button>
-        <button id="mask" role="button">Mask: on</button>
         <button id="cam" role="button">Switch Cam</button>
+        <button id="voice" role="button">Voice: off</button>
+        <span>🚙: <span id="cars">0</span>
+        <span>👩: <span id="people">0</span>
     </p>
     <canvas id="canvas" width="640" height="480"></canvas>
     <video id="video" width="640" height="480" autoplay></video>
     
     <script src="https://docs.opencv.org/4.x/opencv.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
 <script>
+    
+    const voice_button = document.getElementById("voice")
+    let voice_status = false
+
+    voice_button.addEventListener("click", () => {
+        voice_status = !voice_status
+        voice_button.innerHTML = "Voice: " + ((voice_status) ? "On" : "Off")
+        if (voice_status) speak("Głos")
+        else speak("Bez głosu")
+    })
+    
+    function speak(text) {
+        if (voice_status == false) {
+            console.log("Voice off")
+            return;
+        }
+            console.log("speaking")
+            // Check if the browser supports the Web Speech API
+            if ('speechSynthesis' in window) {
+                // Ensure that any previous speech is cancelled
+                window.speechSynthesis.cancel();
+                
+                // Create a new instance of SpeechSynthesisUtterance
+                var msg = new SpeechSynthesisUtterance(text);
+                
+                // Set the language (optional)
+                msg.lang = 'pl-PL'; 
+                msg.rate = 2
+
+                // Speak the text
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("Sorry, your browser doesn't support text to speech.");
+            }
+        }
     const video = document.getElementById('video')
     const canvas = document.getElementById('canvas')
     const context = canvas.getContext('2d')
     const switch_cam_button = document.getElementById('cam')
 
-    const lt = document.getElementById('lt')
-    const ht = document.getElementById('ht')
-    const ad = document.getElementById('ad')
-    const au = document.getElementById('au')
+    let model;
 
-    const edges_button = document.getElementById("edges")
+    let model_loaded = false
+    async function loadModel() {
+        model = await cocoSsd.load();
+        model_loaded = true
+    }
+
+    loadModel();
+
     let edges_enabled = true
 
     const mask_button = document.getElementById("mask")
@@ -92,21 +133,50 @@
             .then(async (stream) => {
                 video.srcObject = stream
                 video.play()
+                speak("Witaj")
             })
             .catch((error) => {
                 console.error("Error accessing the webcam", error);
             });
     }
 
+    let predictions = []
+    let cars = [];
+    let people = [];
+    let cycles = []
+    let motorcycles = []
+    let buses = []
+    let trains = []
+    let trucks = []
+    let tlights = []
+    let stopsigns = []
+    let benches = []
+    let dogs = []
+    let cats = []
 
-    let low_thresh = 150;
+    let low_thresh = 50;
     let high_thresh = 200;
     
 
-    setInterval(() => {
+    setInterval(async () => {
     if (is_ready) {
         if (cv.Mat && video.readyState === video.HAVE_ENOUGH_DATA) {
+            context.clearRect(0,0, canvas.width, canvas.height)
             context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            let n_of_cars_before = 0
+            if (model_loaded) {
+                const img = tf.browser.fromPixels(canvas);
+                n_of_cars_before = predictions.length
+                predictions = await model.detect(img);
+                img.dispose()
+            }
+        
+                
+
+            
+
+
             let src = cv.imread('canvas');
             let dst = new cv.Mat(src.rows, src.cols, cv.CV_8UC3);
             let gray = new cv.Mat();
@@ -121,7 +191,7 @@
             cv.Canny(gray, edges, low_thresh, high_thresh, 3);
             
             // Hough Line Transform
-            cv.HoughLinesP(edges, lines, 1, Math.PI / 180, 2, 20, 40);
+            cv.HoughLinesP(edges, lines, 1, Math.PI / 180, 50, 50, 10);
             
             if (mask_enabled) {
                 // Threshold for white areas
@@ -144,61 +214,142 @@
             
             // clear
             context.clearRect(0,0, canvas.width, canvas.height)
-            
+
             // Display dst
             cv.imshow('canvas', dst);
-            
             src.delete(); dst.delete(); gray.delete(); edges.delete(); lines.delete(); mask.delete();
+
+            
+            let n_cars = cars.length
+            let n_people = people.length
+            let n_cycles = cycles.length
+            let n_motorcycles = motorcycles.length
+            let n_buses = buses.length
+            let n_trains = trains.length
+            let n_trucks = trucks.length
+            let n_tlights = tlights.length
+            let n_stopsigns = stopsigns.length
+            let n_benches = benches.length
+            let n_dogs = dogs.length
+            let n_cats = cats.length
+
+            cars = []
+            people = []
+            cycles = []
+            motorcycles = []
+            buses = []
+            trains = []
+            trucks = []
+            tlights = []
+            stopsigns = []
+            benches = []
+            dogs = []
+            cats = []
+
+            predictions.forEach(prediction => {
+                let p = prediction.class
+                if (p=='car'||p=='person'||p=='bicycle'||p=='motorcycle'||p=='bus'||p=='train'||p=='truuck'||p=='traffic light'||p=='stop sign'
+                ||p=='bench'||p=='dog'||p=='cat') {
+                    console.log(prediction.class)
+                    if (prediction.class == 'car') cars.push(prediction)
+                    if (prediction.class == 'person') people.push(prediction)
+                    if (prediction.class == 'bicycle') cycles.push(prediction)
+                    if (prediction.class == 'motorcycle') motorcycles.push(prediction)
+                    if (prediction.class == 'bus') buses.push(prediction)
+                    if (prediction.class == 'train') trains.push(prediction)
+                    if (prediction.class == 'truck') trucks.push(prediction)
+                    if (prediction.class == 'traffic light') tlights.push(prediction)
+                    if (prediction.class == 'stop sign') stopsigns.push(prediction)
+                    if (prediction.class == 'bench') benches.push(prediction)
+                    if (prediction.class == 'dog') dogs.push(prediction)
+                    if (prediction.class == 'cat') cats.push(prediction)
+
+                    
+
+                    context.beginPath();
+                    context.rect(prediction.bbox[0], prediction.bbox[1], prediction.bbox[2], prediction.bbox[3]);
+                    context.lineWidth = 4;
+                    context.strokeStyle = 'red';
+                    context.fillStyle = 'red';
+                    context.stroke();
+                    context.fillText(prediction.class, prediction.bbox[0], prediction.bbox[1] > 10 ? prediction.bbox[1] - 5 : 10);
+                }
+            });
+
+            let text_p = "";
+            if (n_people != people.length) {
+                if (people.length == 0) text_p += " Brak ludzi."
+                else text_p += " "+people.length+" osoby."
+            }
+
+            if (n_cars != cars.length) {
+                if (cars.length == 0) text_p += " Brak aut."
+                else text_p += " "+cars.length+" auta."
+            }
+
+            if (n_cycles != cycles.length) {
+                if (cycles.length == 0) text_p += " Brak rowerów."
+                else text_p += " "+cycles.length+" rowery."
+            }
+
+            if (n_motorcycles != motorcycles.length) {
+                if (motorcycles.length == 0) text_p += " Brak motorów."
+                else text_p += " "+motorcycles.length+" motory."
+            }
+
+            if (n_buses != buses.length) {
+                if (buses.length == 0) text_p += " Brak busów."
+                else text_p += " "+buses.length+" busy."
+            }
+
+            if (n_trucks != trucks.length) {
+                if (trucks.length == 0) text_p += " Brak ciężarówek."
+                else text_p += " "+trucks.length+" ciężarówki."
+            }
+
+            if (n_tlights != tlights.length) {
+                if (tlights.length == 0) text_p += " Brak świateł."
+                else text_p += " "+tlights.length+" światła."
+            }
+
+            if (n_stopsigns != stopsigns.length) {
+                if (stopsigns.length == 0) text_p += " Brak znaku stopu."
+                else text_p += " "+tlights.length+" znaki stopu."
+            }
+
+            if (n_trains != trains.length) {
+                if (trains.length == 0) text_p += " Brak pociągów."
+                else text_p += " "+trains.length+" pociągi."
+            }
+
+            if (n_benches != benches.length) {
+                if (benches.length == 0) text_p += " Brak ławek."
+                else text_p += " "+benches.length+" ławki."
+            }
+
+            if (n_dogs != dogs.length) {
+                if (dogs.length == 0) text_p += " Brak psów."
+                else text_p += " "+dogs.length+" psy."
+            }
+
+            if (n_cats != cats.length) {
+                if (cats.length == 0) text_p += " Brak kotów."
+                else text_p += " "+cats.length+" koty."
+            }
+
+            if (text_p != "") speak(text_p)
+
+            if (predictions.length == 0 && (n_cars.length > 0 || n_people.length > 0 || n_trucks.length > 0 || motorcycles.length > 0 || n_buses.length >0 || n_people.length > 0 || n_cycles.length > 0)) {
+                speak("Czysto.")
+            }
+            
+            
+            
         }
     }
 }, 1000/60);
 
     
-
-
-    ltd.addEventListener('click', (e) => {
-        low_thresh -= 5;
-        lt.innerHTML = low_thresh
-    })
-
-    ltu.addEventListener('click', (e) => {
-        low_thresh += 5;
-        lt.innerHTML = low_thresh
-    })
-
-    htd.addEventListener('click', (e) => {
-        high_thresh -= 5;
-        ht.innerHTML = high_thresh
-    })
-
-    htu.addEventListener('click', (e) => {
-        high_thresh += 5;
-        ht.innerHTML = high_thresh
-    })
-
-    ad.addEventListener("click", (e) => {
-        low_thresh -= 5;
-        lt.innerHTML = low_thresh
-        high_thresh -= 5;
-        ht.innerHTML = high_thresh
-    })
-    au.addEventListener("click", (e) => {
-        low_thresh += 5;
-        lt.innerHTML = low_thresh
-        high_thresh += 5;
-        ht.innerHTML = high_thresh
-    })
-
-
-    edges_button.addEventListener("click", (e) => {
-        edges_enabled = !edges_enabled
-        edges_button.innerHTML = (edges_enabled) ? "Edges: on" : "Edges: off"
-    })
-
-    mask_button.addEventListener("click", (e) => {
-        mask_enabled = !mask_enabled
-        mask_button.innerHTML = (mask_enabled) ? "Mask: on" : "Mask: off"
-    })
 
 
     navigator.mediaDevices.enumerateDevices().then(function (devices) {
@@ -224,6 +375,8 @@ switch_cam_button.addEventListener("click", async (e) => {
         alert("No cam available!")
     }
 })
+
+        
 
 </script>
 </body>
